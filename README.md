@@ -1,2 +1,2 @@
-# king_of_poo_game
+# king of poo-game 
 This is a interactive node js online game
