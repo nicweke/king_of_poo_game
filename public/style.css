@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-family: HogfishDEMO !important;
+}
+
+.emoji {
+    display: inline-block;
+    font-family: FirefoxEmoji !important;
+    font-size: 10vmin;
+    transform: translate(-50%, -50%);
+    position: fixed;
+}
+
+.zoo {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #00b4d8;
+}
+
+.animal {
+    font-size: 13vmin;
+}
+
+.dung {
+    font-size: 6vmin;
+    cursor: pointer;
+    z-index: 2;
+    animation: grow 1s forwards;
+    opacity: 0.8;
+}
+
+.dung.shrink {
+    animation: shrink 1s forwards;
+}
+
+@keyframes flip-bounce {
+    0% {
+        transform: scaleX(-1) translate(-50%, -50%) translateY(-2vmin);
+    }
+    100% {
+        transform: scaleX(-1) translate(-50%, -50%) translateY(2vmin);
+    }
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shrink {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+.fence {
+    position: fixed;
+    bottom: 0;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.title {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 3.2vw;
+}
+
+.au {
+    position: fixed;
+    bottom: 2vh;
+    right: 2vw;
+    font-size: 3vw;
+}
+
+.score {
+    position: fixed;
+    top: 4vh;
+    right: 3vw;
+    font-size: 4vw;
+    z-index: 99999;
+}
+
+.score .value {
+    color: brown;
+}
+
+.fence img {
+    height: 100%;
+}
+
+.bounce {
+    animation: bounce 400ms alternate ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(-50%, -50%) translateY(-2vmin);
+    }
+    100% {
+        transform: translate(-50%, -50%) translateY(2vmin);
+    }
+}
